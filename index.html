@@ -187,16 +187,38 @@
             transform: translateY(-8px) scale(1.07);
             box-shadow: 0 0 70px var(--accent-glow);
         }
-
-        #credit {
+#credit {
     position: fixed;
-    bottom: 6px;          /* very close to bottom */
-    right: 10px;          /* very close to right */
-    font-size: 1.5rem;
-    opacity: 0.65;
-    z-index: 9999;        /* ABOVE everything (boxes, canvas, etc) */
-    pointer-events: none; /* so it doesn’t block clicks */
-    
+    bottom: 4px;
+    right: 8px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    z-index: 99999;
+    pointer-events: none;
+    color: #fce7f3;
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+    #credit {
+        font-size: 0.7rem;
+        bottom: 3px;
+        right: 6px;
+    }
+}
+
+/* 📱 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    #credit {
+        font-size: 0.8rem;
+    }
+}
+
+/* 💻 Laptops & up */
+@media (min-width: 1024px) {
+    #credit {
+        font-size: 1rem;
+    }
 }
 
 
