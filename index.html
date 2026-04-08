@@ -188,6 +188,19 @@
             box-shadow: 0 0 70px var(--accent-glow);
         }
 
+        #credit {
+    position: fixed;
+    bottom: 6px;          /* very close to bottom */
+    right: 10px;          /* very close to right */
+    font-size: 1.5rem;
+    opacity: 0.65;
+    z-index: 9999;        /* ABOVE everything (boxes, canvas, etc) */
+    pointer-events: none; /* so it doesn’t block clicks */
+    
+}
+
+
+
         .text-gradient {
             font-family: 'Playfair Display', serif;
             background: linear-gradient(90deg, #ffc2e2, #ff8ab6, #ffffff);
@@ -227,6 +240,8 @@
             <!-- Step 1 -->
             <div id="step1" class="step text-center">
                 <div class="anim-child text-7xl mb-6 heart-beat">❤️</div>
+                
+
                 <h1 class="anim-child text-4xl md:text-5xl font-bold text-gradient mb-4">Hey, Dad.</h1>
                 <p class="anim-child text-gray-300 mb-8 text-xl">We wanted to create something just for you today to show how much we appreciate you and everything you do.</p>
                 
@@ -430,6 +445,8 @@
             initThreeJS();
             showStep(1);
         });
+        
     </script>
+    <div id="credit">MADE BY OBARO OMADHEBOR</div>
 </body>
 </html>
